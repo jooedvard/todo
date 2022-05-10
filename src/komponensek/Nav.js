@@ -49,28 +49,20 @@ class Nav extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="d-flex flex-column w-75 justify-content-center">
         
-        <div className="row">
-          <div className="col-md-5">
-         
-          <div className="form-floating">
+        <div className="form-floating">
           
-            <select className="form-select" onChange={(e)=>{this.onSelect(e)}}>
-              <option defaultValue="">Choose prioritize</option>
-              <option value={1}>Prioritize 1 </option>
-              <option value={2}>Prioritize 2</option>
-              <option value={3}>Prioritize 3</option>
-            </select>
-            <label htmlFor="floatingSelect">Prioritize</label>
-          </div>
-          </div>
-          
+          <select className="form-select" onChange={(e)=>{this.onSelect(e)}}>
+            <option defaultValue="">Choose prioritize</option>
+            <option value={1}>Prioritize 1 </option>
+            <option value={2}>Prioritize 2</option>
+            <option value={3}>Prioritize 3</option>
+          </select>
+          <label htmlFor="floatingSelect">Prioritize</label>
         </div>
-        <div className="row ">
-       
-        <div className="col-md-5 mt-3">
-        <div className="calendar"><Calendar onChange={(e)=>{this.onCalendarChanger(e)}}></Calendar></div>
+
+        <div className="calendar"><Calendar className={"mt-3"} onChange={(e)=>{this.onCalendarChanger(e)}}></Calendar></div>
         
         <div ref={this.todoInput} className="invisible  ">
        
@@ -88,9 +80,6 @@ class Nav extends Component {
             onClick={() => {
               this.newTodo();
             }}>Ok</button>
-        </div>
-        
-        </div>
         </div>
         
        

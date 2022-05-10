@@ -59,3 +59,7 @@
 .todo{
     width: 100%!important;
 }
+#root > div > div.d-flex.flex-column.w-75.justify-content-center{
+    margin: auto;
+}
+h3{}
